@@ -1,0 +1,14 @@
+query GetCountries {
+    countries {
+        code,
+        name,
+      }
+}
+
+query GetCountryByIsoCode($code:ID!) {
+    country (code: $code) {
+        name,
+        native,
+        currency,
+    }
+}
